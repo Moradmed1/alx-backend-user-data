@@ -110,6 +110,9 @@ def update_password(email: str, reset_token: str, new_password: str) -> None:
     assert res.status_code == 200
     assert res.json() == {"email": email, "message": "Password updated"}
 
+    EMAIL = "guillaume@holberton.io"
+    PASSWD = "b4l0u"
+    NEW_PASSWD = "t4rt1fl3tt3"
 
 if __name__ == "__main__":
     register_user(EMAIL, PASSWD)
